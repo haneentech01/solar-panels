@@ -1,0 +1,1379 @@
+/* Start Global Rule */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-main-color: #0B9586;
+  --bg-second-color: #FFBB1C;
+  --text-main-color: #FFF;
+  --text-second-color: #000;
+  --text-third-color: #3CAB90;
+}
+
+.html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", serif;
+  overflow-x: hidden;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Small */
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medim */
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@font-face {
+  font-family: 'Akazan';
+  src: url('./fonts/Akazan-Regular.ttf') format('truetype');
+}
+
+/* End Global Rule */
+
+
+/* Start Navbar */
+header {
+  position: fixed;
+  background-color: var(--bg-main-color);
+  width: 100%;
+  height: 86px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0px;
+}
+
+.logo {
+  width: 157px;
+  height: 54px;
+}
+
+.linksbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  display: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.icon span {
+  background-color: var(--text-main-color);
+  margin-bottom: 5px;
+  height: 3px;
+  width: 25px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  z-index: 2;
+  gap: 8px;
+  width: 506px;
+  height: 38px;
+  margin: 0 96px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-main-color);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 8px 28px;
+  line-height: 21.78px;
+  letter-spacing: 0.94px;
+  display: inline-block;
+}
+
+.overlay a {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.contact {
+  width: 284px;
+  height: 50px;
+  color: var(--text-main-color);
+  font-family: "Inter", serif;
+  letter-spacing: 0.94px;
+  text-align: right;
+}
+
+.call {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+}
+
+.phone {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+/* Large Screens */
+@media (max-width:1200px) {
+  header .container {
+    padding: 16px 0px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 50px;
+  }
+
+  .contact {
+    width: fit-content;
+  }
+
+  .phone {
+    font-size: 18px;
+  }
+}
+
+/* Mobile + Medium Screens */
+@media (max-width: 991px) {
+  header .container {
+    padding: 12px 20px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .nav-links::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 0px;
+    top: -25px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-main-color);
+    position: absolute;
+    right: -93px;
+    top: 100%;
+    z-index: 9;
+    width: 200px;
+    height: 275px;
+    padding-top: 15px;
+  }
+
+  .icon:hover+.nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .contact {
+    display: none;
+  }
+}
+
+/* End Navbar */
+
+
+/* Start Hero Section */
+.hero-section {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 650px;
+  background-image: url(./images/solar-panels-meadow\ 1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.overlay-hero {
+  background: linear-gradient(267.36deg, rgba(0, 0, 0, 0.7) 2.2%, rgba(0, 0, 0, 0.182) 58.17%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 333px;
+  height: 25px;
+  margin-top: 155px;
+  margin-left: 150px;
+  color: var(--text-main-color);
+  z-index: 1;
+}
+
+.start-number,
+.end-number {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Akazan', sans-serif;
+}
+
+.progress-bar {
+  position: relative;
+  width: 221px;
+  height: 4px;
+  overflow: hidden;
+  background-color: #575757;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 89px;
+  background-color: var(--text-main-color);
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  width: 729px;
+  height: 305px;
+  margin-top: 82px;
+  margin-left: 150px;
+  gap: 24px;
+  z-index: 1;
+}
+
+.text-content h1 {
+  font-size: 52px;
+  color: var(--text-main-color);
+  font-weight: 600;
+  line-height: 63px;
+  letter-spacing: -2%;
+}
+
+.text-content p {
+  font-size: 21px;
+  color: var(--text-main-color);
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  gap: 24px;
+  width: 405px;
+  height: 41px;
+}
+
+.button-group a {
+  text-decoration: none;
+  padding: 12px 34px;
+  border-radius: 109px;
+  font-size: 14px;
+  transition: 0.3s;
+  font-weight: 400;
+  letter-spacing: 8%;
+}
+
+.call-button {
+  background: #34c759;
+  color: var(--text-main-color);
+}
+
+.call-button:hover {
+  background: #28a745;
+}
+
+.callback-button {
+  background: #ffa500;
+  color: var(--text-second-color);
+}
+
+.callback-button:hover {
+  background: #e69500;
+}
+
+
+/* Mobile + Meduim Screens*/
+@media (max-width: 768px) {
+  .hero-section {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .progress-container {
+    margin-left: 0px;
+    width: 300px;
+    height: 18px;
+    margin-top: 0px;
+  }
+
+  .text-content {
+    margin-left: 0px;
+    padding: 20px;
+    margin-top: 0px;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+
+  .button-group {
+    width: 100%;
+    align-items: center;
+  }
+
+  .button-group a {
+    padding: 10px 15px;
+  }
+}
+
+/* End Hero Section */
+
+/* Start Solar Installers Section */
+.solar-installers-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: auto;
+  background-color: white;
+  padding: 80px 0;
+  gap: 50px;
+  margin: 0 152px;
+}
+
+.text-content-solar-installers {
+  flex: 1 1 50%;
+}
+
+.text-content-solar-installers h1 {
+  font-size: 42px;
+  color: #101828;
+  margin-bottom: 24px;
+  letter-spacing: -2%;
+  line-height: 51px;
+  font-weight: 600;
+}
+
+.text-content-solar-installers p {
+  color: #475467;
+  line-height: 24px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.list-content {
+  width: 498px;
+  height: 156px;
+  counter-reset: list-counter;
+}
+
+.list-content li {
+  list-style: none;
+  font-size: 20px;
+  margin: 12px 10px;
+  color: #101828;
+  line-height: 30px;
+  font-weight: 600;
+  counter-increment: list-counter;
+}
+
+.list-content li:before {
+  content: counter(list-counter, decimal-leading-zero) "/ ";
+  color: #84BD3A;
+  margin-right: 10px;
+}
+
+.image-section {
+  flex: 1 1 40%;
+  text-align: center;
+  position: relative;
+}
+
+.image-section img {
+  max-width: 100%;
+}
+
+/* Mobile + Meduim Screens*/
+@media (max-width: 991px) {
+  .solar-installers-section {
+    flex-direction: column;
+    gap: 0px;
+    padding: 40px 15px;
+    margin: 0;
+  }
+
+  .text-content-solar-installers,
+  .image-section {
+    flex: 1 1 100%;
+  }
+
+  .text-content-solar-installers h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .text-content-solar-installers p {
+    margin-bottom: 24px;
+  }
+
+  .list-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .list-content li {
+    font-size: 14px;
+    margin: 10px 0px;
+  }
+
+  .image-section {
+    margin-top: 20px;
+  }
+
+  .image-section img {
+    max-width: 100%;
+  }
+}
+
+/* End Solar Installers Section*/
+
+/* Start Power Section */
+.power-section {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 505px;
+  background-image: url(./images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.text-content-power-section {
+  margin: 150px 147px;
+  color: var(--text-main-color);
+}
+
+.text-content-power-section h1 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 51px;
+  letter-spacing: -2%;
+  margin-bottom: 24px;
+}
+
+.text-content-power-section p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 50px;
+  width: 678px;
+  height: 56px;
+}
+
+.button-power-section {
+  width: 173px;
+  height: 41px;
+}
+
+.button-power-section a {
+  text-decoration: none;
+  padding: 12px 34px;
+  border-radius: 109px;
+  font-size: 14px;
+  transition: 0.3s;
+  font-weight: 400;
+  letter-spacing: 8%;
+}
+
+.call-button-power-section {
+  background: #ffa500;
+  color: var(--text-main-color);
+}
+
+.call-button-power-section:hover {
+  background: #e69500;
+}
+
+/* Mobile + Meduim Screens*/
+@media (max-width: 991px) {
+  .power-section {
+    align-items: center;
+  }
+
+  .text-content-power-section {
+    margin: 0;
+    color: var(--text-main-color);
+    padding: 15px;
+  }
+
+  .text-content-power-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 40px;
+  }
+
+  .text-content-power-section p {
+    font-size: 18px;
+    margin-bottom: 60px;
+    width: 350px;
+  }
+
+  .button-power-section a {
+    padding: 12px 27px;
+  }
+}
+
+/* End Power Section */
+
+/* Start Solar Kits Section */
+.solar-kits-section {
+  width: 100%;
+  min-height: 777px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-header {
+  text-align: center;
+  margin: auto;
+  width: 936px;
+  height: 123px;
+}
+
+.section-header h1 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #101828;
+  margin-bottom: 24px;
+  letter-spacing: -2%;
+  line-height: 51px;
+}
+
+.section-header p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #475467;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  max-width: 100%;
+  margin-top: 50px;
+  padding: 0 150px;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0px 4px 30px 0px #0000000D;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #101828;
+  line-height: 30px;
+  padding: 20px 20px 24px;
+}
+
+.card-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #475467;
+  line-height: 24px;
+  width: 318px;
+  height: 72px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* text-overflow: ellipsis;
+  white-space: nowrap; */
+  padding: 0px 20px 24px;
+}
+
+.card .arrow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 20px 20px 20px;
+}
+
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-third-color);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile + Meduim Screens*/
+@media (max-width: 991px) {
+  .solar-kits-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 100%;
+  }
+
+  .section-header {
+    width: 100%;
+    height: 123px;
+    padding: 10px;
+  }
+
+  .cards-container {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .card-title {
+    padding: 10px 20px;
+  }
+
+  .card-description {
+    padding: 0px 20px 20px;
+  }
+
+  .card .arrow {
+    padding: 20px 20px 20px;
+  }
+}
+
+/* End Solar Kits Section */
+
+/* Start Repairs Section */
+.repairs-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 505px;
+  background-image: url(./images/8116\ 12.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.text-content-repairs-section {
+  display: flex;
+  flex-direction: column;
+  background: #00000091;
+  width: 858px;
+  height: 311px;
+  border-radius: 12px;
+  gap: 32px;
+  padding: 44px;
+  margin: auto;
+  backdrop-filter: blur(24px);
+  color: var(--text-main-color);
+}
+
+.text-content-repairs-section h1 {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 51px;
+  letter-spacing: -2%;
+  text-align: center;
+}
+
+.text-content-repairs-section p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+/* Mobile + Meduim Screens*/
+@media (max-width: 991px) {
+  .text-content-repairs-section {
+    width: 100%;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .text-content-repairs-section h1 {
+    font-size: 32px;
+    line-height: 15px;
+  }
+
+  .text-content h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+
+  .button-group {
+    width: 100%;
+    align-items: center;
+  }
+
+  .button-group a {
+    padding: 10px 15px;
+  }
+}
+
+/* End Repairs Section */
+
+/* Start Energy Innovators */
+.energy-innovators-container {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  padding: 80px 150px;
+  margin: 0 auto;
+  background: #FFBB1C0D;
+}
+
+.energy-innovators-header {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 360px;
+  height: 337px;
+  gap: 20px;
+}
+
+.lightning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  border-width: 21px;
+  background: var(--text-third-color);
+  border: 21px solid #3CAB9026;
+}
+
+.lightning img {
+  width: 28px;
+  height: 28px;
+}
+
+.energy-innovators-header h1 {
+  color: #101828;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 51px;
+  letter-spacing: -2%;
+}
+
+.energy-innovators-header p {
+  color: #475467;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.energy-innovators-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
+}
+
+.energy-innovators-card {
+  box-shadow: 0px 4px 30px 0px #0000000D;
+  background: #3CAB900D;
+  border: 1px dashed var(--text-third-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 24px;
+  gap: 20px;
+}
+
+.energy-innovators-card img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  height: 110px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.energy-innovators-card h2 {
+  font-size: 20px;
+  color: #101828;
+  font-weight: 600;
+}
+
+.energy-innovators-card p {
+  font-size: 16px;
+  color: #475467;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.energy-innovators-card a {
+  color: #008060;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.energy-innovators-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .energy-innovators-container {
+    flex-direction: column;
+    margin-bottom: 24px;
+    padding: 20px;
+  }
+
+  .energy-innovators-header {
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+/* End Energy Innovators */
+
+/* Start Our Values */
+.our-values-section {
+  width: 100%;
+  min-height: 719px;
+  display: flex;
+  gap: 32px;
+  padding: 80px 150px;
+  flex-direction: column;
+}
+
+.our-values-cards-container {
+  display: flex;
+  width: 1140px;
+  min-height: 420px;
+  gap: 32px;
+}
+
+.our-values-card {
+  width: 360px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 32px;
+  background: #3CAB900D;
+  border: 1px solid var(--text-third-color);
+}
+
+.our-values-card img {
+  width: 70px;
+  height: 70px;
+}
+
+.our-values-card-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+
+.our-values-card-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #475467;
+}
+
+/* Mobile + Meduim Screens*/
+@media (max-width: 1200px) {
+  .our-values-section {
+    padding: 10px 20px;
+  }
+
+  .our-values-cards-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .our-values-card {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+/* End Our Values */
+
+/* Start Recommendations Section  */
+.testimonial-section {
+  width: 100%;
+  padding: 80px 150px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 400px;
+  height: 296px;
+  gap: 28px;
+}
+
+.testimonial-text img {
+  width: 59px;
+  height: 48px;
+}
+
+.testimonial-text h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #1C1C1C;
+}
+
+.testimonial-text p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #1C1C1C;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 708px;
+  height: 443px;
+  gap: 87px;
+  border-radius: 24px;
+  padding: 40px;
+  background: #3CAB900F;
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 52px;
+}
+
+.testimonial-title {
+  width: 628px;
+  height: 20px;
+  font-family: "Plus Jakarta Sans", serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20.16px;
+  color: var(--text-third-color);
+}
+
+.testimonial-header img {
+  width: 72px;
+  height: 8px;
+}
+
+blockquote {
+  width: 516px;
+  height: 144px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #101828;
+  margin: 0;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 628px;
+  height: 60px;
+  margin-bottom: 40px;
+}
+
+.testimonial-author {
+  display: flex;
+}
+
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-right: 8px;
+}
+
+.testimonial-author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.36px;
+  color: #1C1C1C;
+}
+
+.author-role {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+  color: #1C1C1C;
+}
+
+.testimonial-navigation {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 48px;
+  gap: 16px;
+}
+
+/* Mobile + Meduim Screen */
+@media (max-width: 991px) {
+  .testimonial-section {
+    padding: 40px 20px;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-text,
+  .testimonial-card,
+  .testimonial-footer {
+    width: 100%;
+  }
+
+  .testimonial-card {
+    padding: 40px 10px;
+  }
+
+  .testimonial-title {
+    width: fit-content;
+  }
+
+  blockquote {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .testimonial-footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial-author-info {
+    gap: 10px;
+  }
+
+  .testimonial-navigation {
+    font-size: 28px;
+  }
+}
+
+/* End Recommendations Section  */
+
+/* Start Footer */
+footer {
+  background: #283646;
+  color: white;
+  width: 100%;
+  min-height: 412px;
+  padding: 80px 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 54px;
+}
+
+.footer-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 54px;
+  width: 1140px;
+  min-height: 126px;
+}
+
+.right-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  width: 499px;
+  height: 126px;
+}
+
+.footer-links {
+  display: flex;
+  width: 499px;
+  height: 24px;
+  gap: 40px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+
+.newsletter {
+  width: 408px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 44px;
+  gap: 10px;
+}
+
+.newsletter p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-box input {
+  border: 1px solid #B3BDC7;
+  flex: 1;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  background: #FFFFFF17;
+  color: #92989F;
+  flex: 1;
+  border-width: 1px;
+  padding: 12px 34px;
+  width: 259px;
+  height: 48px;
+  border-radius: 38px;
+  border-width: 1px;
+}
+
+
+.subscribe-box button {
+  margin-left: -50px;
+  background: #FFBB1C;
+  border: none;
+  cursor: pointer;
+  border-radius: 109px;
+  padding: 12px 34px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-bottom p:nth-child(1) {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.26px;
+  color: #92989F;
+  text-align: left;
+  width: 451px;
+  height: 16px;
+}
+
+.footer-bottom p:nth-child(2) {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.26px;
+  text-align: right;
+  color: #92989F;
+  width: 218px;
+  height: 16px;
+}
+
+@media (max-width: 1200px) {
+  footer {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-box {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .right-footer {
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .newsletter {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+  }
+
+  .subscribe-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .subscribe-box input {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .subscribe-box button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0;
+  }
+
+  hr {
+    width: 100% !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-bottom p {
+    width: 100% !important;
+    text-align: left;
+  }
+
+  .footer-bottom p:nth-child(2) {
+    width: 100% !important;
+    text-align: left;
+  }
+}
+
+/* End Footer */
